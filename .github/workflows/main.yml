@@ -6,8 +6,10 @@ on:
     branches: main
 jobs:
   tests:
-    - name: 'Checkout sources'
-      uses: actions/checkout@v2
-    - name: 'Codelimit'
-      uses: getcodelimit/codelimit-action@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout sources'
+        uses: actions/checkout@v2
+      - name: 'Codelimit'
+        uses: getcodelimit/codelimit-action@main
 
