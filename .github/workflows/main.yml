@@ -1,0 +1,13 @@
+name: 'main'
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+jobs:
+  tests:
+    - name: 'Checkout sources'
+      uses: actions/checkout@v2
+    - name: 'Codelimit'
+      uses: getcodelimit/codelimit-action@main
+
